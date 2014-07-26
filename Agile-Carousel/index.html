@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="agile_carousel.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+<script src="agile_carousel.alpha.js"></script>
+
+<style type="text/css">
+.slides{
+margin-top: 30px;
+margin-left: 5px;}
+.slide_inner_image{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.slide_inner_text{
+   float:right;
+   white-space:nowrap;
+}
+</style>
+
+<script>
+
+    // Code used for "Flavor 2" example (above)
+    
+    $.getJSON("agile_carousel_data.php", function(data) {
+        $(document).ready(function(){
+            $("#flavor_2").agile_carousel({
+                
+                // required settings                
+                carousel_data: data,
+                carousel_outer_height: 600,
+                carousel_height: 600,
+                slide_height: 300,
+                carousel_outer_width: 800,
+                slide_width: 700,                                                
+                // end required settings
+                                                
+                transition_type: "fade",
+            //    transition_time: 600,
+            //    timer: 3000,
+              //  continuous_scrolling: true,
+                control_set_1: "numbered_buttons,previous_button,pause_button,next_button",
+                control_set_2: "content_buttons",
+                change_on_hover: "content_buttons"
+            });
+        });
+    });
+ </script>
+</head>
+
+<body>
+<div id="flavor_2"></div>
+</body>
+</html>
