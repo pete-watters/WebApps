@@ -1,0 +1,84 @@
+<html>
+
+
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript">
+// global variables to be shared between functions
+
+var Location_dataString , geoCountry , clientIP;
+
+/**
+ * Get the location using the IP returned by getClientIP()
+ */
+var getGeoCountry = function (clientIP){
+    // call PHP script to lookup country based on IP
+ jQuery.ajax({
+      url: "geo.php",
+      type: "POST",
+      dataType: "json",
+      data: "ip="+clientIP,
+      success: function(msg){
+        geoCountry = msg.country_name;
+        console.log( "geoCountry = "+ geoCountry );
+        $("#geoIP_PHP_div").append(geoCountry);
+      },
+      error: function(textStatus) {
+                // error happening here
+                //console.log("textStatus." + textStatus);
+                }
+   });
+ // IF country lookup doesn't work "United States" is returned but extra validation here just in case  
+    if(!(geoCountry) || (geoCountry.length == 0)){
+        geoCountry = "United States";
+    }
+    
+}
+
+/**
+*   Get the client IP address
+*/
+var getClientIP = function(){
+jQuery.ajax({
+      url: "https://jsonip.appspot.com/?callback=",
+      type: "POST",
+      dataType: "jsonp",
+      success: function(msg){
+        clientIP = msg.ip;
+        // lookup country when success
+        getGeoCountry(clientIP);
+      },
+      error: function(textStatus) {
+                // error happening here cannot lookup client IP
+        console.log("textStatus." + textStatus);
+      }
+   });
+}
+
+
+jQuery(document).ready(function() {
+ //   jQuery.getScript("http://freegeoip.net/json/?callback=getLocation");
+
+    getClientIP();   
+
+});
+
+
+</script>
+
+
+
+</head>
+
+<body>
+
+<h2> New way - via PHP </h2>    
+<div id="geoIP_PHP_div">
+
+</div>
+
+
+</body>
+
+
+</html>

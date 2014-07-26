@@ -1,0 +1,161 @@
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Created from _jui.css and _demo_page.css
+ * General page setup
+ */
+#data_table_div {
+        font: 80%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #fff;
+}
+
+
+#data_table_div #data_table_container {
+        width: 800px;
+        margin: 30px auto;
+        padding: 0;
+}
+
+
+#data_table_div #footer {
+        margin: 50px auto 0 auto;
+        padding: 0;
+}
+
+#data_table_div #demo {
+        margin: 30px auto 0 auto;
+}
+
+
+#data_table_div .big {
+        font-size: 1.3em;
+        font-weight: bold;
+        line-height: 1.6em;
+        color: #4E6CA3;
+}
+
+#data_table_div .spacer {
+        height: 20px;
+        clear: both;
+}
+
+#data_table_div .clear {
+        clear: both;
+}
+
+#data_table_div pre {
+        padding: 15px;
+        background-color: #F5F5F5;
+        border: 1px solid #CCCCCC;
+}
+
+#data_table_div h1 {
+        margin-top: 2em;
+        font-size: 1.3em;
+        font-weight: normal;
+        line-height: 1.6em;
+        color: #4E6CA3;
+        border-bottom: 1px solid #B0BED9;
+        clear: both;
+}
+
+#data_table_div h2 {
+        font-size: 1.2em;
+        font-weight: normal;
+        line-height: 1.6em;
+        color: #4E6CA3;
+        clear: both;
+}
+
+#data_table_div a {
+        color: #0063DC;
+        text-decoration: none;
+}
+
+#data_table_div a:hover {
+        text-decoration: underline;
+}
+
+#data_table_div ul {
+        color: #4E6CA3;
+}
+
+.css_right {
+        float: right;
+}
+
+.css_left {
+        float: left;
+}
+
+/*
+ * jQuery UI specific styling
+ */
+
+.paging_two_button .ui-button {
+        float: left;
+        cursor: pointer;
+        * cursor: hand;
+}
+
+.paging_full_numbers .ui-button {
+        padding: 2px 6px;
+        margin: 0;
+        cursor: pointer;
+        * cursor: hand;
+}
+
+.ui-buttonset .ui-button {
+        margin-right: -0.1em !important;
+}
+
+.paging_full_numbers {
+        width: 350px !important;
+}
+
+.ui-toolbar {
+        padding: 5px;
+}
+
+.dataTables_paginate {
+        width: auto;
+}
+
+.dataTables_info {
+        padding-top: 3px;
+}
+
+table.display thead th {
+        padding: 3px 0px 3px 10px;
+        cursor: pointer;
+        * cursor: hand;
+}
+
+
+/*
+ * Sort arrow icon positioning
+ */
+table.display thead th div.DataTables_sort_wrapper {
+        position: relative;
+        padding-right: 20px;
+        padding-right: 20px;
+}
+
+table.display thead th div.DataTables_sort_wrapper span {
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        right: 0;
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ * Everything below this line is the same as demo_table.css. This file is
+ * required for 'cleanliness' of the markup
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<title>Title of the document</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media='all' />
+<link rel="stylesheet" href="css/jquery.qtip.css" type="text/css" media='all' />
+<link rel="stylesheet" href="css/jquery-ui-1.8.21.custom.css" type="text/css" media='all' />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function formDefault(theInput) {
+if (theInput.value =='') {
+theInput.value = theInput.defaultValue;
+}
+}
+</script>
+<script type="text/javascript" src="js/jquery.qtip.js"></script>
+<script type="text/javascript">	
+$(document).ready(function() {	
+$('.infoimg').each(function()
+   {
+$(this).qtip(
+     {
+        content: $(this).attr('alt'),
+		
+		position: {
+					my: 'left center', // Use the corner...
+					at: 'right center' // ...and opposite corner
+		}
+	     });	
+     });
+});
+</script>
+</head>
+
+<body>
+<div id="rays"></div>
+<div id="dots2"></div>
+<!-- START HEADER -->
+<div id="header">
+  <a href="" title="Nova" id="logo"><img src="images/logo.png" alt="Nova" /></a>
+  <div id="menu">
+    <div id="loggedin">
+	Logged in: <span id="username">Andy Smith</span>
+		 <div class="middleline"></div>
+	 </div>
+	 <a href="" title="Logout" class="logout">Logout <img src="images/logout.png" alt="Logout" /></a>
+  </div>
+</div>
+<!-- END HEADER -->
+
+<div id="dots-middle">&nbsp;</div>
+
+<!-- START CONTEXT -->
+<div id="context">
+  <div id="canvas">
+
+
+<div class="client-editor">
+
+<form class="partner-questionsform">
+  <ul class="partner-questionslist">
+   <li>
+   <h3>Ask the following question</h3>
+   <input type="text" placeholder="Type your question" />
+   
+   <div class="partnerq-container">
+    <div class="partnerq-createnew">
+	<input type="checkbox" name="something" value="else" />
+	<span>Create new</span>
+	</div>
+	 
+	 <div class="rightfields">
+	 <span>Enter a tag <input type="text" value="" /><img class="infoimg" width="17" src="images/information.png" alt="This is some info!" /></span>
+	 <span>The answer will be
+	 <select>
+     <option value="text">Text</option>
+     <option value="text2">Text2</option>
+     <option value="text3">Text3</option>
+    </select>
+	<img class="infoimg" width="17" src="images/information.png" alt="This is some info!" /></span>
+	 </div>
+   </div> 
+   
+   <span>Include this chapter if the answer is <input type="text" value="" /></span>
+   <input type="button" value="Done!" class="blue-btn" />
+   </li>
+   
+   
+   
+   
+   
+   <li>
+   <h3>Insert the answer of the following question</h3>
+   <input type="text" placeholder="Type your answer" />
+   
+   <div class="partnerq-container">
+    <div class="partnerq-createnew">
+	<input type="checkbox" name="something" value="else" />
+	<span>Create new</span>
+	</div>
+	 
+	 <div class="rightfields">
+	 <span>Enter a tag <input type="text" value="" /><img class="infoimg" width="17" src="images/information.png" alt="This is some info!" /></span>
+	 <span>The answer will be
+	 <select>
+     <option value="text">Text</option>
+     <option value="text2">Text2</option>
+     <option value="text3">Text3</option>
+    </select>
+	<img class="infoimg" width="17" src="images/information.png" alt="This is some info!" /></span>
+	 </div>
+   </div> 
+
+   <input type="button" value="Done!" class="blue-btn" />
+   </li>
+  </ul>
+  
+</form>
+  
+</div>
+  </div>
+
+  
+    <div id="right-sidebar">
+	
+	 <div class="boxrgb">
+	  <div class="innerbox">
+	  <span class="create-templ">Save Changes</span>
+	  <ul class="partner-rightboxlist">
+	   <li>Save changes to this chapter here...</li>
+	   <li><a href="" title="Save Changes" class="partner-savechanges orangebtn">Save</a></li>
+	   <li><span>or</span></li>
+	   <li><a href="" title="Save Changes" class="partner-publish orangebtn">Publish</a></li>
+	  </ul>
+	  
+	  </div>
+	 </div>
+	
+	 <div class="boxrgb boxfilters">
+	   <div class="innerbox innerfilters">
+	     <div class="boxhead">
+	       <div class="templates-icon"></div> 
+		   <span class="filterstext">Templates</span>
+	   </div>
+	   <ul class="folderlist">
+	   
+	   <li>
+	   <img src="thumbs/1.jpg" alt="" class="templates-img" />
+	   Safety Statement
+	   <span>
+	   <a href="" title="Activity" class="activity-btn"></a>
+	   <a href="" title="Edit" class="partneredit-btn"></a>
+	    </span>
+	   </li>
+	
+	   <li>
+	   <img src="thumbs/2.jpg" alt="" class="templates-img" />
+	   Method Statement
+	   <span>
+	   <a href="" title="Activity" class="activity-btn"></a>
+	   <a href="" title="Edit" class="partneredit-btn"></a>
+	   </span>
+	   </li>
+	   
+	   <li>
+	   <img src="thumbs/3.jpg" alt="" class="templates-img" />
+	   Contract
+	   <span>
+	   <a href="" title="Activity" class="activity-btn"></a>
+	   <a href="" title="Edit" class="partneredit-btn"></a>
+	   </span>
+	   </li>
+	   
+	   <li>
+	   <img src="thumbs/4.jpg" alt="" class="templates-img" />
+	   Fire Safety
+	   <span>
+	   <a href="" title="Activity" class="activity-btn"></a>
+	   <a href="" title="Edit" class="partneredit-btn"></a>
+	   </span>
+	   </li>
+	   
+	   <li>
+	   <img src="thumbs/5.jpg" alt="" class="templates-img" />
+	   Accident Form
+	   <span>
+	   <a href="" title="Activity" class="activity-btn"></a>
+	   <a href="" title="Edit" class="partneredit-btn"></a>
+	   </span>
+	  </li>
+	  
+	   </ul>
+	   
+	  </div>
+	 </div>
+	 
+	 
+	</div>
+</div>
+<!-- END CONTEXT -->
+
+<!-- START FOOTER -->
+<div id="footer">
+<span class="footerleft">Copyright 2012 © <strong>All rights reserved</strong></span>
+<ul class="footerright">
+<li>Home</li>
+<li class="dot">.</li>
+<li>About</li>
+<li class="dot">.</li>
+<li>Contact us</li>
+</ul>
+
+</div>
+<!-- END FOOTER -->
+</body>
+
+</html>

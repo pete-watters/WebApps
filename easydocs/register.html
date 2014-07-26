@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<title>Title of the document</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media='all' />
+<script type="text/javascript">
+function formDefault(theInput) {
+if (theInput.value =='') {
+theInput.value = theInput.defaultValue;
+}
+}
+</script>
+</head>
+
+<body>
+<div id="rays"></div>
+<div id="dots2"></div>
+<!-- START HEADER -->
+<div id="header">
+  <a href="" title="Nova" id="logo"><img src="images/logo.png" alt="Nova" /></a>
+  <div id="menu">
+    <ul class="login-menu">
+	 <li><a href="" title="">Home</a></li>
+	 <li><a href="" title="">Apps</a></li>
+	 <li><a href="" title="">Team</a></li>
+	 <li><a href="" title="">Services</a></li>
+	 <li><a href="" title="">Contact</a></li>
+	</ul> 
+  </div>
+</div>
+<!-- END HEADER -->
+
+<div id="dots-middle">&nbsp;</div>
+
+<!-- START CONTEXT -->
+<div id="context" style="height:700px;">
+<!-- Start Register Container -->
+<div class="register-container">
+<img src="images/default.png" alt="" style="float:left;margin-right:10px;margin-left:17px;"/>
+<div class="register-welcome">Hi, welcome to Nova!<span>Please register using the form below.</span></div>
+<form class="register-form">
+<input type="text" placeholder="Company name" name="companyname" />
+<input type="text" placeholder="Company short name" name="companyshortname" />
+<input type="text" placeholder="First name" name="firstname" />
+<input type="text" placeholder="Second name" name="secondname" />
+<input type="text" placeholder="Username" name="username" />
+<input type="text" placeholder="Email address" name="email" />
+<input type="password" placeholder="Password" name="password" />
+<input type="password" placeholder="Confirm password" name="confirmpassword" />
+<input type="submit" class="blue-btn register-btn" value="Register" />
+</form>
+</div>
+<!-- End Register Container -->
+
+</div>
+<!-- END CONTEXT -->
+
+<!-- START FOOTER -->
+<div id="footer">
+<span class="footerleft">Copyright 2012 © <strong>All rights reserved</strong></span>
+<ul class="footerright">
+<li>Home</li>
+<li class="dot">.</li>
+<li>About</li>
+<li class="dot">.</li>
+<li>Contact us</li>
+</ul>
+
+</div>
+<!-- END FOOTER -->
+</body>
+
+</html>
